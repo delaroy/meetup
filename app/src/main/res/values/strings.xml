@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">MeetUp</string>
+    <string name="app_name">Meetup</string>
+    <string name="copyright_m">copyright \u00A9 meetup. </string>
+    <string name="meet_text">Get to meet great people around you</string>
+    <string name="hello">Hello!</string>
+    <string name="details">please enter your details to sign in</string>
+    <string name="phone">Phone Number</string>
+    <string name="pin">Pin</string>
+    <string name="forgot_pin">forgot your pin?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register">Register</string>
+    <string name="already_register"></string>
+    <string name="full_name">Full Names</string>
+    <string name="repeat_pin">Repeat Pin</string>
+    <string name="agree">I agree to the terms &amp; conditions</string>
+    <string name="have_acct">Already have an account?</string>
+    <string name="connect">Connect with your business partners and associates using the new platform</string>
+    <string name="title_activity_product">Meetup</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
 </resources>

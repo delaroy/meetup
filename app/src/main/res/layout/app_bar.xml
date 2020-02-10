@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
+    android:orientation="vertical"
     android:background="@color/white"
-    android:gravity="center_vertical"
-    app:layout_collapseMode="pin"
-    app:layout_scrollFlags="scroll|enterAlways"
-    app:theme="@style/MyToolbarTheme">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="0.9"
+                android:hint="@string/search"
+                android:drawableRight="@drawable/down"
+                android:padding="10dp"
+                android:background="@drawable/border"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:layout_marginStart="25dp"
+                android:drawableEnd="@drawable/down" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/set"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_gravity="center"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="@color/textColor"
-        android:id="@+id/toolbar_title" />
+        android:minHeight="?actionBarSize"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/textColor"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@color/textColor"
+        app:tabBackground="@color/white"
+        app:tabMode="fixed">
+    </com.google.android.material.tabs.TabLayout>
 
-
-</androidx.appcompat.widget.Toolbar>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>

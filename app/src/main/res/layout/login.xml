@@ -106,6 +106,7 @@
             app:layout_constraintVertical_bias="0.110000014">
 
             <EditText
+                android:id="@+id/phone_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1" />
@@ -122,6 +123,7 @@
             android:layout_marginRight="40dp"
             android:hint="@string/pin"
             app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
             app:layout_constraintBottom_toTopOf="@+id/copyright"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -129,8 +131,10 @@
             app:layout_constraintVertical_bias="0.13">
 
             <EditText
+                android:id="@+id/pin_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -189,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
@@ -200,5 +204,20 @@
             app:layout_constraintStart_toEndOf="@+id/noacct"
             app:layout_constraintTop_toBottomOf="@+id/login"
             app:layout_constraintVertical_bias="0.372" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

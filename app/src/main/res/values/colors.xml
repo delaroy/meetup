@@ -7,4 +7,5 @@
     <color name="background">#FFF3F3</color>
     <color name="white">#ffffff</color>
     <color name="forggot">#D02764</color>
+    <color name="album_title">#4c4c4c</color>
 </resources>

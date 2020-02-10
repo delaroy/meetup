@@ -77,6 +77,7 @@
             app:layout_constraintVertical_bias="0.110000014">
 
             <EditText
+                android:id="@+id/name_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1" />
@@ -99,6 +100,7 @@
             app:layout_constraintVertical_bias="0.13">
 
             <EditText
+                android:id="@+id/phone_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1" />
@@ -121,8 +123,10 @@
             app:layout_constraintVertical_bias="0.13">
 
             <EditText
+                android:id="@+id/pin_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,8 +147,10 @@
             app:layout_constraintVertical_bias="0.13">
 
             <EditText
+                android:id="@+id/repeatpin_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,7 +172,7 @@
             app:layout_constraintVertical_bias="0.13" />
 
         <ImageButton
-            android:id="@+id/login"
+            android:id="@+id/register"
             android:layout_width="280dp"
             android:layout_height="46dp"
             android:layout_marginStart="8dp"
@@ -192,12 +198,12 @@
             android:textColor="@color/textColor"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/signup"
+            app:layout_constraintEnd_toStartOf="@+id/signin"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/signup"
+            android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -207,5 +213,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/noacct" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
